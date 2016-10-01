@@ -31,13 +31,13 @@ License: GPLv3
 /**
  * Exporter
  */
-function add_mav_menu_to_export() {
+function add_nav_menu_to_export() {
 	$post_type = get_post_type_object( 'nav_menu_item' );
 	?>
 	<p><label><input type="radio" name="content" value="<?php echo esc_attr( $post_type->name ); ?>" /> <?php echo esc_html( $post_type->label ); ?></label></p>
 	<?php
 }
-add_action( 'export_filters','add_mav_menu_to_export' );
+add_action( 'export_filters','add_nav_menu_to_export' );
 
 
 /**
