@@ -1,6 +1,6 @@
 <?php
 /**
-Plugin Name: Nav Menu Exporter and Importer
+Plugin Name: Nav Menu Importer
 Plugin URI: https://github.com/medfreeman/wp-nav-menu-importer
 GitHub Plugin URI: https://github.com/medfreeman/wp-nav-menu-importer
 Description: Import and Export nav menus. Requires WordPress Importer plugin
