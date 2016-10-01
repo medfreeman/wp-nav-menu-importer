@@ -3,7 +3,7 @@
 Plugin Name: Nav Menu Importer
 Plugin URI: https://github.com/medfreeman/wp-nav-menu-importer
 GitHub Plugin URI: https://github.com/medfreeman/wp-nav-menu-importer
-Description: Import and Export nav menus. Requires WordPress Importer plugin
+Description: Import and Export nav menus.
 Version: 1.0.0
 Author: hissy, megumi themes / Mehdi Lahlou
 Author URI: https://github.com/medfreeman
@@ -236,6 +236,6 @@ if ( class_exists( 'WP_Import' ) ) {
 	// setup importer.
 	$nav_menu_importer = new Nav_Menu_Importer();
 
-	register_importer( 'nav_menu', __( 'Nav Menu', 'nav-menu-importer' ), __( 'Export and Import nav menus. Requires WordPress Importer plugin', 'nav-menu-importer' ), array( $nav_menu_importer, 'dispatch' ) );
+	register_importer( 'nav_menu', __( 'Nav Menu', 'nav-menu-importer' ), __( 'Import nav menus.', 'nav-menu-importer' ), array( $nav_menu_importer, 'dispatch' ) );
 
 }
