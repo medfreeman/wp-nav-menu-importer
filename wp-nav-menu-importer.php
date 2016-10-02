@@ -63,22 +63,6 @@ if ( ! defined( 'WP_LOAD_IMPORTERS' ) ) {
 	return;
 }
 
-// Load Importer API.
-require_once ABSPATH . 'wp-admin/includes/import.php';
-
-if ( ! class_exists( 'WP_Importer' ) ) {
-	$class_wp_importer = ABSPATH . 'wp-admin/includes/class-wp-importer.php';
-	if ( file_exists( $class_wp_importer ) ) {
-		require $class_wp_importer;
-	}
-}
-
-// include WXR file parsers.
-$wordpress_importer = ABSPATH . 'wp-content/plugins/wordpress-importer/wordpress-importer.php';
-if ( file_exists( $wordpress_importer ) ) {
-	require_once $wordpress_importer;
-}
-
 if ( class_exists( 'WP_Import' ) ) {
 	/**
 	 * Nav Menu Importer class
