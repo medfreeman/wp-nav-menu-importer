@@ -55,12 +55,16 @@ function add_nav_menu_terms_to_export_file() {
  */
 add_action( 'rss2_head', 'add_nav_menu_terms_to_export_file', 10, 1 );
 
-
 /**
  * Importer
  */
-if ( ! defined( 'WP_LOAD_IMPORTERS' ) ) {
+if ( ! defined( 'WP_LOAD_IMPORTERS' ) && ! defined( 'WP_CLI' ) || ! WP_CLI ) {
 	return;
+}
+
+// WP-CLI.
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	include( dirname( __FILE__ ) . '/includes/class-wp-cli.php' );
 }
 
 if ( class_exists( 'WP_Import' ) ) {
