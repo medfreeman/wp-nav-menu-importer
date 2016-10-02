@@ -29,7 +29,7 @@ License: GPLv3
  */
 
 /**
- * Exporter
+ * Add nav menu radio button to export screen
  */
 function add_nav_menu_to_export() {
 	$post_type = get_post_type_object( 'nav_menu_item' );
@@ -74,7 +74,7 @@ if ( class_exists( 'WP_Import' ) ) {
 		function dispatch() {
 			$this->header();
 
-			$step = empty( $_GET['step'] ) ? 0 : (int) $_GET['step'];
+			$step = empty( $_GET['step'] ) ? 0 : (int) $_GET['step']; // Input var ok.
 			switch ( $step ) {
 				case 0:
 					$this->greet();
@@ -127,7 +127,7 @@ if ( class_exists( 'WP_Import' ) ) {
 		}
 
 		/**
-		 * Real menu importing
+		 * Menu items processing
 		 */
 		function process_menus() {
 			$count = 0;
