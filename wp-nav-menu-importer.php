@@ -39,7 +39,6 @@ function add_nav_menu_to_export() {
 }
 add_action( 'export_filters','add_nav_menu_to_export' );
 
-
 /**
  * Importer
  */
@@ -166,8 +165,10 @@ if ( class_exists( 'WP_Import' ) ) {
 					}
 
 					// set postmeta.
+					$item_post_meta = array();
 					foreach ( $item['postmeta'] as $meta ) {
-						$$meta['key'] = $meta['value'];
+						$item_post_meta[ $meta['key'] ] = $meta['value'];
+						extract( $item_post_meta );
 					}
 
 					// skip nav item when menu item object is not exists.
