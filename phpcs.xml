@@ -8,10 +8,13 @@
 
 	<arg name="warning-severity" value="0"/>
 
-	<rule ref="WordPress"/>
+	<rule ref="WordPress">
+		<!-- This project uses extract because i don't have the time
+		to refactor the code atm -->
+		<exclude name="WordPress.Functions.DontExtract.extract" />
+	</rule>
 	<rule ref="Wordpress-Extra">
 		<!-- This project doesnt use wordpress.com functions -->
-		<exclude name="WordPress.VIP.RestrictedFunctions.get_term_link" />
 		<exclude name="WordPress.VIP.RestrictedFunctions.term_exists" />
 	</rule>
 </ruleset>
