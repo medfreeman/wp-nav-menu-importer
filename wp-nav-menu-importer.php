@@ -135,6 +135,8 @@ if ( class_exists( 'WP_Import' ) ) {
 			$this->import_start( $file );
 
 			wp_suspend_cache_invalidation( true );
+			// WP_Import::process_terms.
+			$this->process_terms();
 			// only processing nav menus.
 			$this->process_menus();
 			wp_suspend_cache_invalidation( false );
