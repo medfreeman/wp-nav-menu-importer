@@ -40,6 +40,23 @@ function add_nav_menu_to_export() {
 add_action( 'export_filters','add_nav_menu_to_export' );
 
 /**
+ * Add nav menu terms to export file, to avoid non-existent menu slug errors
+ */
+function add_nav_menu_terms_to_export_file() {
+	$current_screen = get_current_screen();
+	if ( 'export' === $current_screen->id && isset( $_GET['content'] ) && 'nav_menu_item' === sanitize_key( $_GET['content'] ) ) { // Input var ok.
+		wxr_nav_menu_terms();
+	}
+}
+/**
+ * Fires at the end of the RSS2 Feed Header.
+ *
+ * @since 2.0.0
+ */
+add_action( 'rss2_head', 'add_nav_menu_terms_to_export_file', 10, 1 );
+
+
+/**
  * Importer
  */
 if ( ! defined( 'WP_LOAD_IMPORTERS' ) ) {
