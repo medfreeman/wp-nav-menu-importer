@@ -1,6 +1,6 @@
 {
   "name": "wp-nav-menu-importer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Wordpress plugin to import / export nav menus. Requires WordPress Importer plugin.",
   "scripts": {
     "postinstall": "npm run install:wpcs",

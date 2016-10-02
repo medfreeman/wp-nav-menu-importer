@@ -4,7 +4,7 @@ Plugin Name: Nav Menu Importer
 Plugin URI: https://github.com/medfreeman/wp-nav-menu-importer
 GitHub Plugin URI: https://github.com/medfreeman/wp-nav-menu-importer
 Description: Import and Export nav menus.
-Version: 1.0.0
+Version: 1.1.0
 Author: hissy, megumi themes / Mehdi Lahlou
 Author URI: https://github.com/medfreeman
 Author Email: mehdi.lahlou@free.fr
